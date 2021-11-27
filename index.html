@@ -204,7 +204,7 @@
             <div style="width:100%;" class="column">
                 <div class="content">
                     <h3 name ="title"></h3>
-                    <img class="imgapi" name="imgapi">
+                    <a name="reference"><img class="imgapi" name="imgapi"></a>
                     <p name="desc"></p>
                     </div>
             </div>
@@ -213,7 +213,7 @@
             <div class="content">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <img class="imgapi" name="imgapi">
+                <a name="reference"><img class="imgapi" name="imgapi"></a>
                 <p name="desc"></p> 
                 </div>
             </div>
@@ -222,7 +222,7 @@
             <div class="content">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <img class="imgapi" name="imgapi">
+                <a name="reference"><img class="imgapi" name="imgapi"></a>
                 <p name="desc"></p> 
             </div>
             </div>
@@ -257,6 +257,7 @@ request.onreadystatechange = function() {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
             document.getElementsByName("imgapi")[i].src = data[i].image;
+            document.getElementsByName("reference")[i].href = data[i].gamerpower_url;
         }
         
     }
