@@ -25,7 +25,7 @@
         height: 15em;
         overflow: hidden;
     }
-    #newsbg {
+    .newsbg {
         padding: 2em 0;
         height: auto;
         overflow: hidden;
@@ -135,7 +135,7 @@
             </div>
             <div class="column">
                 <div class="content">
-                    <img id="newsbg" src="Xbox_Game_Pass_Arrow_logo.jpg">
+                    <img class="newsbg" src="Xbox_Game_Pass_Arrow_logo.jpg">
                     </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
             </div>
             <div class="column">
                 <div class="content">
-                <img id="newsbg" src="news.png">
+                <img class="newsbg" src="news.png">
                 </div>
             </div>
         </div>
@@ -187,7 +187,7 @@
             <div style="width:100%;" class="column">
                 <div class="content">
                     <h3 name ="title"></h3>
-                    <img id="newsbg" src="">
+                    <img class="newsbg" src="">
                     <p name="desc"></p>
                     </div>
             </div>
@@ -204,7 +204,7 @@
             <div class="content">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <img id="newsbg" src="">
+                <img class="newsbg" src="">
                 <p name="desc"></p> 
             </div>
             </div>
@@ -236,6 +236,7 @@ request.onreadystatechange = function() {
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
+            document.getElementsByName("newsbg")[i+2].src = data[i].thumbnail;
         }
         
     }
