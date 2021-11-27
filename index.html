@@ -214,7 +214,7 @@
     request = new XMLHttpRequest();
     request.open("GET", "https://www.gamerpower.com/api/giveaways", true);
     request.withCredentials = true;
-    request.setRequestHeader('Access-Control-Allow-Headers', 'https://www.gamerpower.com/api/giveaways');
+    request.setRequestHeader('Access-Control-Allow-Headers', '*');
 
     
 request.onreadystatechange = function() {
