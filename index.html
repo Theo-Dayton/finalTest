@@ -212,7 +212,7 @@
     function loadData() {
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
-    request.open("GET", "https://api.agify.io?name=Black", true);
+    request.open("GET", "https://www.gamerpower.com/api/giveaways?platform=" + x, true);
 
     
 request.onreadystatechange = function() {
@@ -222,7 +222,6 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        alert(data.age);
     }
     else if (request.readyState == 4 && request.status != 200) 
     {
