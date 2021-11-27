@@ -213,7 +213,6 @@
     let x = document.getElementById("platform").value.toLowerCase();
     alert(x);
     request = new XMLHttpRequest();
-    request.setRequestHeader("Access-Control-Allow-Origin","*")
     request.open("GET", "https://api.agify.io?name=Black", true);
 
     
