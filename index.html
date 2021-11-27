@@ -228,6 +228,7 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
+        alert("success!");
     }
     else if (request.readyState == 4 && request.status != 200) 
     {
