@@ -187,7 +187,7 @@
             <div style="width:100%;" class="column">
                 <div class="content">
                     <h3 name ="title"></h3>
-                    <img class="newsbg">
+                    <img class="newsbg" name="imgapi">
                     <p name="desc"></p>
                     </div>
             </div>
@@ -204,7 +204,7 @@
             <div class="content">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <img class="newsbg">
+                <img class="newsbg" name="imgapi">
                 <p name="desc"></p> 
             </div>
             </div>
@@ -236,7 +236,7 @@ request.onreadystatechange = function() {
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
-            document.getElementsByName("newsbg")[i+2].src = data[i].thumbnail;
+            document.getElementsByName("imgapi")[i].src = data[i].thumbnail;
         }
         
     }
