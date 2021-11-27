@@ -213,6 +213,8 @@
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
     request.open("GET", "https://www.gamerpower.com/api/giveaways", true);
+    request.withCredentials = true;
+    request.setRequestHeader('Access-Control-Allow-Headers', 'https://www.gamerpower.com/api/giveaways');
 
     
 request.onreadystatechange = function() {
