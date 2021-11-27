@@ -1,0 +1,208 @@
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+ }
+
+.spacer {
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 18px;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+#image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url("https://www.onlygfx.com/wp-content/uploads/2021/04/grey-triangle-pattern-seamless-background-1.jpg");
+  }
+
+img.one {
+  height: 100%;
+  max-height: 300px;
+  width: 100%;
+}
+
+.topnav {
+  background-color: #0D0F0F;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.topnav a {
+  color: #f8f8f8;
+  text-align: center;
+  float: left;
+  display: block;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 18px;
+  transition-duration: 0.4s;
+}
+
+.topnav a:hover {
+  background-color: #389F16;
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.2em;
+}
+
+h1 span{
+  background-color: rgba(179, 179, 179, 0.432);
+  padding: .2em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 17px;
+}
+
+#mainbody {
+  padding: 2em 0;
+  margin: 1%;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+.topimage {
+  width: 98%;
+  height: 100px;
+  position: absolute;
+  margin: -2em 0 0 0;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+a:hover {
+  color: #389F16;
+}
+
+.button {
+  background-color: #0D0F0F; 
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: .75rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.button:hover {
+  background-color: #389F16; 
+  color: rgb(255, 255, 255);
+}
+
+.button:hover {
+  background-color: #389F16; 
+  color: rgb(255, 255, 255);
+}
+ 
+.list {
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+  display: table;
+  table-layout: fixed;
+  width:100%;
+  background-image: url(pattern.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.list>li {
+  display: table-cell;
+  padding: 0 5px;
+  text-align: center;
+}
+
+select{
+  background:transparent;
+  width: 200px;
+  padding: 2px;
+  font-size: 1em;
+  font-weight:600;
+  color:#fff;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 22px;
+  -webkit-appearance: none;
+  }
+
+
+  .select-div{
+    margin: 0 auto;
+    width: 200px;
+    height: 25px;
+    overflow: hidden;
+    background: url(arrowhead.png) no-repeat right #363636;
+    border-top:#575757 1px solid;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    -webkit-box-shadow: inset 0 2px 4px rgba(107, 105, 105, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:    0px 8px 3px -9px #000000;
+    -webkit-box-shadow: 0px 8px 3px -9px #000000;
+    box-shadow:         0px 8px 3px -9px #000000;
+ }
+
+ select > option {
+  background: #363636;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .topimage {
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .column {
+      width: 100%;
+    }
+    .topimage {
+      height: 90px;
+    }
+}
