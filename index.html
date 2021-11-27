@@ -213,6 +213,7 @@
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
     request.open("GET", "https://www.gamerpower.com/api/giveaways?platform=pc", true);
+    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     request.setRequestHeader('Access-Control-Allow-Headers', '*');
 
     
