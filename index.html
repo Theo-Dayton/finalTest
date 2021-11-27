@@ -216,6 +216,8 @@
 
     
 request.onreadystatechange = function() {
+    alert(request.readyState);
+        alert(request.status);
  
     if (request.readyState == 4 && 
         request.status == 200) 
