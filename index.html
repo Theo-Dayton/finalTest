@@ -212,7 +212,7 @@
     function loadData() {
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
-    request.open("GET", "https://gamerpower.p.rapidapi.com/api/giveaways", true);
+    request.open("GET", "https://gamerpower.p.rapidapi.com/api/giveaways?platform=" + x + "&sort-by=popularity", true);
     request.withCredentials = true;
     request.setRequestHeader('x-rapidapi-key', '241bcaecf0mshfafde6fd0116e61p16d96fjsnbf4ede1c5446');
     request.setRequestHeader('Access-Control-Allow-Headers', '*');
