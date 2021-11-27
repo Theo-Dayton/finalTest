@@ -157,7 +157,6 @@
             <option>Pc</option>
             <option>Steam</option>
             <option>Epic-Games-Store</option>
-            <option>Ubisoft</option>
             <option>GoG</option>
             <option>Itchio</option>
             <option>PS4</option>
@@ -174,7 +173,7 @@
       <div style="padding: 0 2em"class="row api">
         <div class="column">
             <div style="width:100%;" class="column">
-                <h3> Xbox Game Pass Gets Surprise New Game</h3>
+                <h3 id ="title"></h3>
                 <p>The Xbox Game Pass library seems to get bigger every day. 
                     And while games occasionally disappear from the service, 
                     including several that are leaving Game Pass after this 
@@ -185,7 +184,7 @@
         </div>
         <div class="column">
             <div style="width:100%;" class="column">
-                <h3>Sony's Next PlayStation Game Coming To PC May Have Been Revealed</h3>
+                <h3 id ="title"></h3>
                 <p>Sony is bringing more of its games to PC, and the company has 
                     even established a new publishing arm called PlayStation PC. 
                     Now, one of the company's next console games to come to PC 
@@ -221,8 +220,7 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        alert("lol");
-        alert(data[0].title);
+        document.getElementById("cData").innerHTML = data[0].title;
     }
     else if (request.readyState == 4 && request.status != 200) 
     {
