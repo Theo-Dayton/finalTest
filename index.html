@@ -220,8 +220,6 @@
 
     
 request.onreadystatechange = function() {
-    alert(request.readyState);
-        alert(request.status);
  
     if (request.readyState == 4 && 
         request.status == 200) 
@@ -232,6 +230,9 @@ request.onreadystatechange = function() {
     }
     else if (request.readyState == 4 && request.status != 200) 
     {
+        
+    alert(request.readyState);
+        alert(request.status);
         alert("Request failed!");
     }
 }
