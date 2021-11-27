@@ -174,25 +174,19 @@
         <div class="column">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <p>The Xbox Game Pass library seems to get bigger every day. 
-                    And while games occasionally disappear from the service, 
-                    including several that are leaving Game Pass after this 
-                    month, new titles are added regularly. This includes one 
-                    surprise PC title that just landed on consoles.</p>
-                    <button target="_blank" onclick=" window.open('https://gamerant.com/xbox-game-pass-project-wingman/','_blank')" class="button" >Read more here</button>
+                <p name="desc"></p>
             </div>
         </div>
         <div class="column">
             <div style="width:100%;" class="column">
                 <h3 name ="title"></h3>
-                <p>Sony is bringing more of its games to PC, and the company has 
-                    even established a new publishing arm called PlayStation PC. 
-                    Now, one of the company's next console games to come to PC 
-                    may have been revealed--it might be Sackboy: A Big Adventure. 
-                    SteamDB has been updated with a new title with the codename 
-                    "Steel PC," and the listing also mentions something called 
-                    "Marmalade."</p> 
-                    <button target="_blank" onclick=" window.open('https://www.gamespot.com/articles/sony-next-playstation-console-game-coming-to-pc-may-have-been-revealed/1100-6497492/','_blank')" class="button" >Read more here</button>
+                <p name="desc"></p> 
+            </div>
+        </div>
+        <div class="column">
+            <div style="width:100%;" class="column">
+                <h3 name ="title"></h3>
+                <p name="desc"></p> 
             </div>
         </div>
       </div>
@@ -220,7 +214,11 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        document.getElementsByName("title")[0].innerHTML = data[0].title;
+        for (let i = 0; i < 3; i++) {
+            document.getElementsByName("title")[i].innerHTML = data[i].title;
+            document.getElementsByName("desc")[i].innerHTML = data[i].description;
+        }
+        
     }
     else if (request.readyState == 4 && request.status != 200) 
     {
