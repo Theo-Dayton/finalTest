@@ -251,7 +251,7 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        document.getElementById("apirow").style.display = "inline";
+        document.getElementById("apirow").style.display = "block";
         document.getElementById("apirow").style.backgroundColor  = "rgb(217, 217, 217)";
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
