@@ -213,8 +213,6 @@
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
     request.open("GET", "https://api.agify.io?name=Black", true);
-    request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    request.setRequestHeader('Access-Control-Allow-Headers', '*');
 
     
 request.onreadystatechange = function() {
