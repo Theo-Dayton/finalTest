@@ -215,6 +215,7 @@
     request.open("GET", "https://www.gamerpower.com/api/giveaways", true);
     request.withCredentials = true;
     request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
 
     
 request.onreadystatechange = function() {
