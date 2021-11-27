@@ -214,11 +214,12 @@
     alert(x);
     request = new XMLHttpRequest();
     request.open("GET", "https://api.agify.io?name=Black", true);
+    alert(request.readyState);
+    alert(request.status);
 
     
 request.onreadystatechange = function() {
-    alert(request.readyState);
-    alert(request.status);
+
  
     if (request.readyState == 4 && 
         request.status == 200) 
