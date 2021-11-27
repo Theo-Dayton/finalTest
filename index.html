@@ -211,7 +211,6 @@
 <script>
     function loadData() {
     let x = document.getElementById("platform").value.toLowerCase();
-    alert(x);
     request = new XMLHttpRequest();
     request.open("GET", "https://api.agify.io?name=Black", true);
 
@@ -221,7 +220,6 @@ request.onreadystatechange = function() {
     if (request.readyState == 4 && 
         request.status == 200) 
     {   
-        alert("Success!");
         data = request.responseText;
         data = JSON.parse(data);
         alert(data.age);
