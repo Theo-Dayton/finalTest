@@ -199,7 +199,7 @@
             <option>Xbox-360</option>
         </select>
     </div>
-      <div style="background-color: #d9d9d9; visibility: hidden;" id="apirow" class="row api">
+      <div style="background-color: #d9d9d9; display: none;" id="apirow" class="row api">
         <div class="column">
             <div style="width:100%;" class="column">
                 <div class="content">
@@ -251,7 +251,7 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        document.getElementById("apirow").style.visibility = "visible";
+        document.getElementById("apirow").style.display = "inline";
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
