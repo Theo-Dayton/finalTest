@@ -149,10 +149,8 @@
 
       <h2>Feeling lucky? Check out the best giveaways in gaming below</h2>
       <h3>Choose your platform:</h3>
-      <input type = "button" value = "Get Response"
-			onclick="loadData()">
       <div class="select-div">
-        <select id="platform">
+        <select id="platform" onchange="loadData()">
             <option>Pc</option>
             <option>Steam</option>
             <option>Epic-Games-Store</option>
@@ -215,6 +213,7 @@
     let x = document.getElementById("platform").value.toLowerCase();
     alert(x);
     request = new XMLHttpRequest();
+    request.setRequestHeader("Access-Control-Allow-Origin","*")
     request.open("GET", "https://api.agify.io?name=Black", true);
 
     
