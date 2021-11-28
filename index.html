@@ -249,11 +249,9 @@
     </div>
 </div>
 <script>
-    document.onload = function() {
+    window.onload = function() {
         request = new XMLHttpRequest();
         request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
-        alert(request.readyState);
-        alert(request.status);
         request.withCredentials = true;
     request.setRequestHeader('Access-Control-Allow-Headers', '*');
     request.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -269,8 +267,6 @@
             alert("Request failed!");
         }
 }
-alert(request.readyState);
-        alert(request.status);
     request.send;
     }
 
