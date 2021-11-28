@@ -212,7 +212,7 @@
             <option>Xbox-360</option>
         </select>
     </div>
-      <div style="display: none;" id="apirow" class="row api">
+      <div style="display: none;" name="apirow" class="row api">
         <div class="column">
             <div style="width:100%;" class="column">
                 <div class="content">
@@ -242,7 +242,7 @@
         </div>
       </div>
 
-      <div style="display: none;" id="apirow" class="row api">
+      <div style="display: none;" name="apirow" class="row api">
         <div class="column">
             <div style="width:100%;" class="column">
                 <div class="content">
@@ -294,8 +294,14 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        document.getElementById("apirow").style.display = "block";
-        document.getElementById("apirow").style.backgroundColor  = "rgb(217, 217, 217)";
+        for (let i = 0 ; i < 2; i++) {
+            document.getElementsByName("apirow")[i].style.display = "block";
+            if (i == 0) {
+                document.getElementsByName("apirow")[i].style.backgroundColor  = "rgb(217, 217, 217)";
+            }
+            
+        }
+
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
