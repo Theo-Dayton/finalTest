@@ -250,25 +250,28 @@
 </div>
 <script>
     window.onload = function() {
-        request2 = new XMLHttpRequest();
-        request2.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        request = new XMLHttpRequest();
+        request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        request.withCredentials = true;
+        request.setRequestHeader('Access-Control-Allow-Headers', '*');
+        request.setRequestHeader('Access-Control-Allow-Origin', '*');
 
-        request2.onreadystatechange = function() {
-        alert(request2.readyState);
-        alert(request2.status);
-        if (request2.readyState == 4 && request2.status == 200) {   
-            data = request2.responseText;
+    request.onreadystatechange = function() {
+        alert(request.readyState);
+        alert(request.status);
+        if (request.readyState == 4 && request.status == 200) {   
+            data = request.responseText;
             data = JSON.parse(data);
             alert("working1");
         }
-        else if (request2.readyState == 4 && request2.status != 200) 
+        else if (request.readyState == 4 && request.status != 200) 
         {  
-            alert(request2.readyState);
-            alert(request2.status);
+            alert(request.readyState);
+            alert(request.status);
             alert("Request failed!");
         }
 }
-request2.send;
+    request.send;
     }
 
     function loadData() {
