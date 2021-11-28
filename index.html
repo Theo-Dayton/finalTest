@@ -259,10 +259,12 @@
         request.setRequestHeader('Access-Control-Allow-Headers', '*');
         request.setRequestHeader('Access-Control-Allow-Origin', '*');
         alert(4);
+        alert(request.readyState);
+        alert(request.status);
         if (request.readyState == 4 && request.status == 200) {   
         data = request.responseText;
         data = JSON.parse(data);
-        alert("working1");  
+        alert("working1");
     }
     else if (request.readyState == 4 && request.status != 200) 
     {  
