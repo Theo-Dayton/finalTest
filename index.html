@@ -126,7 +126,7 @@
 }
 </style>
 </head>
-<body>
+<body onload="articles()"">
 <div class="topnav">
     <a href = "index.html"><img src="vidisite.png" width="30" height="15"> </a>
     <a href="form.html">Catalog</a>
@@ -249,6 +249,28 @@
     </div>
 </div>
 <script>
+    function articles() {
+        request = new XMLHttpRequest();
+        request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        request.withCredentials = true;
+        request.setRequestHeader('Access-Control-Allow-Headers', '*');
+        request.setRequestHeader('Access-Control-Allow-Origin', '*');
+        if (request.readyState == 4 && 
+        request.status == 200) 
+    {   
+        data = request.responseText;
+        data = JSON.parse(data);
+        alert("working1");
+        
+    }
+    else if (request.readyState == 4 && request.status != 200) 
+    {  
+        alert(request.readyState);
+        alert(request.status);
+        alert("Request failed!");
+    }
+    }
+
     function loadData() {
     let x = document.getElementById("platform").value.toLowerCase();
     request = new XMLHttpRequest();
@@ -286,7 +308,7 @@ request.onreadystatechange = function() {
     }
 }
 request.send();
-} 
+}
 </script>
 </body>
 </html>
