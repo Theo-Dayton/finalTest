@@ -34,7 +34,7 @@
         width: 100%;
     }
     #mainbody {
-        padding: 0;
+        padding: 0 0 2em 0;
         margin: 1%;
         background-color: #f0f0f0;
         box-sizing: border-box;
@@ -272,6 +272,7 @@ request.onreadystatechange = function() {
         data = JSON.parse(data);
         document.getElementById("apirow").style.display = "block";
         document.getElementById("apirow").style.backgroundColor  = "rgb(217, 217, 217)";
+        document.getElementById("mainbody").style.padding = 0;
         for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
