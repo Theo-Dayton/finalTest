@@ -242,36 +242,6 @@
         </div>
       </div>
 
-      <div style="display: none;" name="apirow" class="row api">
-        <div class="column">
-            <div style="width:100%;" class="column">
-                <div class="content">
-                    <h3 name ="title" class="apititle"></h3>
-                    <a name="reference"><img class="imgapi" name="imgapi"></a>
-                    <p name="desc"></p>
-                    </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="content">
-            <div style="width:100%;" class="column">
-                <h3 name ="title" class="apititle"></h3>
-                <a name="reference"><img class="imgapi" name="imgapi"></a>
-                <p name="desc"></p> 
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="content">
-            <div style="width:100%;" class="column">
-                <h3 name ="title" class="apititle"></h3>
-                <a name="reference"><img class="imgapi" name="imgapi"></a>
-                <p name="desc"></p> 
-            </div>
-            </div>
-        </div>
-      </div>
-
 
     
     </div>
@@ -294,15 +264,9 @@ request.onreadystatechange = function() {
     {   
         data = request.responseText;
         data = JSON.parse(data);
-        for (let i = 0 ; i < 2; i++) {
-            document.getElementsByName("apirow")[i].style.display = "block";
-            if (i == 0) {
-                document.getElementsByName("apirow")[i].style.backgroundColor  = "rgb(217, 217, 217)";
-            }
-            
-        }
-
-        for (let i = 0; i < 6; i++) {
+        document.getElementById("apirow").style.display = "block";
+        document.getElementById("apirow").style.backgroundColor  = "rgb(217, 217, 217)";
+        for (let i = 0; i < 3; i++) {
             document.getElementsByName("title")[i].innerHTML = data[i].title;
             document.getElementsByName("desc")[i].innerHTML = data[i].description;
             document.getElementsByName("imgapi")[i].src = data[i].image;
