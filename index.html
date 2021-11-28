@@ -126,7 +126,7 @@
 }
 </style>
 </head>
-<body onload="articles()">
+<body>
 <div class="topnav">
     <a href = "index.html"><img src="vidisite.png" width="30" height="15"> </a>
     <a href="form.html">Catalog</a>
@@ -249,7 +249,8 @@
     </div>
 </div>
 <script>
-    function articles() {
+    document.onload = function articles() {
+        alert(1);
         request = new XMLHttpRequest();
         request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
         request.withCredentials = true;
