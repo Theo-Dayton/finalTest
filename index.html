@@ -252,11 +252,13 @@
     window.onload = function articles() {
         alert(1);
         request = new XMLHttpRequest();
+        alert(2);
         request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        alert(3);
         request.withCredentials = true;
         request.setRequestHeader('Access-Control-Allow-Headers', '*');
         request.setRequestHeader('Access-Control-Allow-Origin', '*');
-        alert(2);
+        alert(4);
         if (request.readyState == 4 && request.status == 200) {   
         data = request.responseText;
         data = JSON.parse(data);
