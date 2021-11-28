@@ -125,7 +125,6 @@
     }
 }
 </style>
-<script src="jquery-3.5.1.min.js"></script>
 </head>
 <body>
 <div class="topnav">
@@ -251,14 +250,32 @@
 </div>
 <script>
     window.onload = function() {
-    $.ajax(function(){
-     url:"http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json",
-     mType:"GET",
-     async:"true",
-     success:function(){
-       alert("Hello");
-     }
-   });
+        request = new XMLHttpRequest();
+        request.open("GET", "http://www.gamespot.com/api/articles/?api_key=5f30e01f5e65271aa166774b3f0baf9b08fee6a4&format=json", true);
+        alert(request.readyState);
+        alert(request.status);
+        request.withCredentials = true;
+    request.setRequestHeader('Access-Control-Allow-Headers', '*');
+    request.setRequestHeader('Access-Control-Allow-Origin', '*');
+
+    request.onreadystatechange = function() {
+        alert(request.readyState);
+        alert(request.status);
+        if (request.readyState == 4 && request.status == 200) {   
+            data = request.responseText;
+            data = JSON.parse(data);
+            alert("working1");
+        }
+        else if (request.readyState == 4 && request.status != 200) 
+        {  
+            alert(request.readyState);
+            alert(request.status);
+            alert("Request failed!");
+        }
+}
+alert(request.readyState);
+        alert(request.status);
+    request.send;
     }
 
     function loadData() {
